@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-html-link-for-pages */
 const NotFoundPage = () => {
 	return (
 		<div className="notfound__container">
