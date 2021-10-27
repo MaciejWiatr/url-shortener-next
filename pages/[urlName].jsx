@@ -1,4 +1,3 @@
-import axios from "axios";
 import Link from "next/link";
 
 const NotFoundPage = () => {
@@ -17,10 +16,11 @@ export default NotFoundPage;
 export const getServerSideProps = async ({ res, params }) => {
 	const { urlName } = params;
 	try {
-		const resp = await axios.get(
+		const resp = await fetch(
 			`${process.env.NEXT_PUBLIC_BACKEND_URL}/url/${urlName}`
 		);
-		const url = resp.data?.url;
+		const json = await resp.json();
+		const url = json.data?.url;
 		if (url) {
 			return {
 				redirect: {
