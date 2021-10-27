@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap");
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	padding: 0 2rem;
+}
+
+.main {
+	min-height: 100vh;
+	padding: 4rem 0;
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	background-image: url("/images/gradient.webp");
+	background-position: center;
+	background-size: cover;
+	color: #2b2a44;
+}
+
+.form__container {
+	display: flex;
+	flex: 1;
+	justify-items: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.form__wrapper {
+	background: rgba(255, 255, 255, 0.3);
+	padding: 1.5rem;
+	backdrop-filter: blur(3px);
+	border-radius: 0.5rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.75rem;
+
+	&__inputs {
+		display: flex;
+		gap: 0.75rem;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+
+		input {
+			background: rgba(255, 255, 255, 0.6);
+		}
+	}
+
+	&__header {
+		text-align: left;
+		width: 100%;
+		font-weight: 600;
+		font-size: 1.75rem;
+	}
+
+	&__error {
+		margin: 0;
+		margin-top: 0.75rem;
+		font-size: 0.75rem;
+		color: #2b2a44;
+	}
+}
+
+.modal__container {
+	h2 {
+		font-weight: 600;
+		color: #2b2a44;
+	}
+	a {
+		color: #e34984;
+	}
+}
+
+.notfound__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+
+	img {
+		height: 200px;
+		width: 350px;
+		border-radius: 0.75rem;
+	}
+	a {
+		margin-top: 1rem;
+		font-weight: 800;
+		color: #e34984;
+
+		&:hover {
+			border-bottom: 2px solid #e34984;
+		}
+	}
+}
+
+.footer {
+	width: 90%;
+	display: flex;
+	padding: 2rem 0;
+	border-top: 1px solid #eaeaea;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		margin-left: 0.25rem;
+	}
+}
