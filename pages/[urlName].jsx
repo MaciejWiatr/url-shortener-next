@@ -18,7 +18,7 @@ export const getServerSideProps = async ({ res, params }) => {
 			`${process.env.NEXT_PUBLIC_BACKEND_URL}/url/${urlName}`
 		);
 		const json = await resp.json();
-		const url = json.data?.url;
+		const url = json?.url;
 		if (url) {
 			return {
 				redirect: {
