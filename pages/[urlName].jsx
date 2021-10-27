@@ -1,12 +1,8 @@
-import Link from "next/link";
-
 const NotFoundPage = () => {
 	return (
 		<div className="notfound__container">
 			<img src="/images/notfound.gif" alt="Not found gif" />
-			<Link href="/" passHref>
-				<a>Take me back!</a>
-			</Link>
+			<a href="/">Take me back!</a>
 		</div>
 	);
 };
